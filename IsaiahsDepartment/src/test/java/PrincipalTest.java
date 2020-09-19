@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PrincipalTest {
@@ -9,7 +12,8 @@ public class PrincipalTest {
     Course course2 = new Course("Phy2");
     Course course3 = new Course("Phy3");
     Course notOneOfcourses = new Course("NotPhy");
-    Course[] courseList = new Course[]{course1, course2, course3};
+
+    ArrayList<Course> courseList = new ArrayList<>(Arrays.asList(course1, course2, course3));
 
     Class year1 = new Class("year1", 18, courseList);
     Applicant johnny = new Applicant("Johnny", 17, year1);

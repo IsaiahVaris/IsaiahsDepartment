@@ -7,7 +7,6 @@ public class CourseTest {
     void testSetCourseName() {
         Boolean actual = course1.setCourseName(" ");
         assertFalse(actual, "Course name has to be valid");
-
     }
 
 

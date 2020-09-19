@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TeacherTest {
@@ -8,7 +11,7 @@ public class TeacherTest {
     Course course2 = new Course("Phy2");
     Course course3 = new Course("Phy3");
     Course notOneOfcourses = new Course("NotPhy");
-    Course[] courseList = new Course[]{course1, course2, course3};
+    ArrayList<Course> courseList = (ArrayList<Course>) Arrays.asList(new Course[]{course1, course2, course3});
     Teacher teacher = new Teacher("Billy", courseList);
 
     @Test
@@ -27,7 +30,8 @@ public class TeacherTest {
 
     @Test
     void testSetCourseTaught() {
-        courseList = new Course[] {course1, course3};
+
+        ArrayList<Course> courseList = new ArrayList<>(Arrays.asList(course1, course3));
         teacher.setCoursesTaught(courseList);
 
         String actual = teacher.getListOfCoursesTaught();

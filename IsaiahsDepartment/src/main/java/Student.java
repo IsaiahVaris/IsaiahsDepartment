@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Student extends Person {
     private int age;
     private Class studentClass;
@@ -40,8 +38,8 @@ public class Student extends Person {
     public String takeCourse(Course course) {
         boolean canTakeCourse = false;
         //Student can take a course only if that course is part of the list of courses taken by student's class
-        for (int i = 0; i < getStudentClass().getCoursesTaken().length && !canTakeCourse; i++) {
-            if (course.equals(getStudentClass().getCoursesTaken()[i])) {
+        for (int i = 0; i < getStudentClass().getCoursesTaken().size() && !canTakeCourse; i++) {
+            if (course.equals(getStudentClass().getCoursesTaken().get(i))) {
                 canTakeCourse = true;
             }
         }

@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Class {
     private String className;
     private int requiredAge;
-    private Course[] coursesTaken;
+    private ArrayList<Course> coursesTaken;
 
-    public Class(String className, int requiredAge, Course[] coursesTaken) {
+    public Class(String className, int requiredAge, ArrayList<Course> coursesTaken) {
         this.className = className;
         this.requiredAge = requiredAge;
         this.coursesTaken = coursesTaken;
@@ -25,11 +27,11 @@ public class Class {
         this.requiredAge = requiredAge;
     }
 
-    public Course[] getCoursesTaken() {
+    public ArrayList<Course> getCoursesTaken() {
         return coursesTaken;
     }
 
-    public void setCoursesTaken(Course[] coursesTaken) {
+    public void setCoursesTaken(ArrayList<Course> coursesTaken) {
         this.coursesTaken = coursesTaken;
     }
 }
